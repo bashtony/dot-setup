@@ -24,6 +24,13 @@ else
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+
+# Instalação do Node.js e nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+[ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"
+nvm install --lts
+nvm alias default 'lts/*'
+
 # Clonagem dos dotfiles
 REPO_DIR="./dotfiles"
 FONTE_DIR="$HOME/.local/share/fonts"
@@ -50,11 +57,5 @@ else
   else
     echo "Fonte não encontrada. Não foi possível movê-la ao destino."
   fi
-  vim -es -u "$HOME/.vimrc" -c "PlugInstall" -c "qa"
 fi
-
-# Instalação do Node.js e nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-[ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"
-nvm install --lts
-nvm alias default 'lts/*'
+vim -es -u "$HOME/.vimrc" -c "PlugInstall" -c "qa" 
