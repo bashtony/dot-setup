@@ -41,7 +41,10 @@ bash setup.sh
 ## 🤖 `.ide.sh`: Projeto ReactJS com TailwindCSS já configurado
 
 No diretório `$HOME` do seu sistema, digite:
-`bash .ide.sh`. Isso abrirá o configurador do projeto.
+```
+bash .ide.sh
+```
+Isso abrirá o configurador do projeto.
 Digite o nome do diretório no qual quer armazenar o projeto e dê Enter. Para abri-lo novamente mais tarde, faça o mesmo passo-a-passo.
 
 ## 🔄 Atualizando os Dotfiles
