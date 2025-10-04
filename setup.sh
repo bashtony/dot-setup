@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd "$HOME"
 
 sudo apt update
 sudo apt upgrade
